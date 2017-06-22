@@ -15,11 +15,10 @@ describe 'httpd::config' do
 
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
-      end
-  
-  
-	it 'creates file' do 
-	expect(chef_run).to create_file("/var/www/html/index.html")
-	end
+    end
+
+    it 'creates file' do
+      expect(chef_run).to create_file('/var/www/html/index.html')
+    end
   end
 end
